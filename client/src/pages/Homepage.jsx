@@ -1,4 +1,5 @@
 import React from "react";
+import LocationComponent from "./LocationComponent.jsx";
 import { useNavigate } from "react-router-dom";
 const Homepage = () => {
   const navigate = useNavigate();
@@ -14,15 +15,15 @@ const Homepage = () => {
           food recommendations tailored to your lifestyle. From symptoms to
           superfoods — it’s all at your fingertips.
         </div>
-        <div className="flex items-center text-center  w-full justify-center mt-20 ">
+        <div className="flex items-stretch text-center  w-full justify-center mt-20 ">
           <div
-            className="text-sm text-white bg-black text-center rounded-3xl w-20 h-8 p-1 mr-10 drop-shadow-[0_0_5px_#fd5b5b] cursor-pointer"
+            className="text-sm mt-4 text-white bg-black text-center rounded-3xl w-20 h-8 p-1 mr-10 drop-shadow-[0_0_5px_#fd5b5b] cursor-pointer"
             onClick={() => navigate("/chatbot")}
           >
             Ask
           </div>
-          <div className="text-sm text-white bg-[#fd5b5b] text-center rounded-3xl w-60 h-8 p-1 ml-10 drop-shadow-[0_0_5px_#fd5b5b] cursor-pointer">
-            Nearby Dr. / Medical Store
+          <div>
+            <LocationComponent />
           </div>
         </div>
       </div>
