@@ -1,3 +1,4 @@
+
 const OpenAI = require("openai");
 const openai = new OpenAI({
   baseURL: "https://openrouter.ai/api/v1",
@@ -100,11 +101,11 @@ exports.chatbotController = async (req, res) => {
   
   try {
     const response = await openai.chat.completions.create({
-      model: "deepseek/deepseek-r1:free",
+      model:"deepseek/deepseek-r1:free",
       messages: [
         {
           "role": "user",
-          "content": text
+          "content": newText
         }
       ],
     });
