@@ -34,7 +34,7 @@ const ChatBot = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const { data } = await axios.post("/api/v1/openai/chatbot", { text,age,gender, weight,height, vegpreference ,healthGoal, allergy,locality});
+      const { data } = await axios.post("https://devxhack-amuhack4-0.onrender.com/api/v1/openai/chatbot", { text,age,gender, weight,height, vegpreference ,healthGoal, allergy,locality});
       setResponse(data.join("\n"));
     } catch (err) {
       if (err.response?.data?.error) {

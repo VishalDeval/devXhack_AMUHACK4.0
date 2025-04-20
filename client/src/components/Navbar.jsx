@@ -11,7 +11,7 @@ const Navbar = () => {
   //handle logout
   const handleLogout = async () => {
     try {
-      await axios.post("/api/v1/auth/logout");
+      await axios.post("https://devxhack-amuhack4-0.onrender.com/api/v1/auth/logout");
       localStorage.removeItem("authToken");
       toast.success("logout successfully ");
       navigate("/login");

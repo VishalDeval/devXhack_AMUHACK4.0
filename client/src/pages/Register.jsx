@@ -28,7 +28,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/v1/auth/register", { username, email, password });
+      await axios.post("https://devxhack-amuhack4-0.onrender.com/api/v1/auth/register", { username, email, password });
       toast.success("User Register Successfully");
       navigate("/login");
     } catch (err) {

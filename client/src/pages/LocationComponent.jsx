@@ -16,7 +16,7 @@ const LocationComponent = () => {
           setLocation({ lat: latitude, lon: longitude });
 
           try {
-            await axios.post('/api/save-location', {
+            await axios.post('https://devxhack-amuhack4-0.onrender.com/api/save-location', {
               latitude,
               longitude,
             });
