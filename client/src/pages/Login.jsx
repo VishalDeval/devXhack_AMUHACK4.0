@@ -25,7 +25,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/v1/auth/login", { email, password });
+      await axios.post("https://devxhack-amuhack4-0.onrender.com/api/v1/auth/login", { email, password });
       toast.success("Login Successfully");
       localStorage.setItem("authToken", true);
       navigate("/");
